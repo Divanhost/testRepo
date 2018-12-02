@@ -1,0 +1,11 @@
+D:\Projects\C#\WorldYachts\WorldYachts\bin\Debug\WorldYachts.exe.config
+D:\Projects\C#\WorldYachts\WorldYachts\bin\Debug\WorldYachts.exe
+D:\Projects\C#\WorldYachts\WorldYachts\bin\Debug\WorldYachts.pdb
+D:\Projects\C#\WorldYachts\WorldYachts\obj\Debug\WorldYachts.csprojAssemblyReference.cache
+D:\Projects\C#\WorldYachts\WorldYachts\obj\Debug\WorldYachts.Properties.Resources.resources
+D:\Projects\C#\WorldYachts\WorldYachts\obj\Debug\WorldYachts.csproj.GenerateResource.cache
+D:\Projects\C#\WorldYachts\WorldYachts\obj\Debug\WorldYachts.csproj.CoreCompileInputs.cache
+D:\Projects\C#\WorldYachts\WorldYachts\obj\Debug\WorldYachts.exe
+D:\Projects\C#\WorldYachts\WorldYachts\obj\Debug\WorldYachts.pdb
+D:\Projects\C#\WorldYachts\WorldYachts\obj\Debug\WorldYachts.IDForm.resources
+D:\Projects\C#\WorldYachts\WorldYachts\obj\Debug\WorldYachts.Forms.Menu.resources
