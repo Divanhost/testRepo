@@ -77,6 +77,11 @@
             this.boatBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.SortGo = new System.Windows.Forms.Button();
             this.SortDescGo = new System.Windows.Forms.Button();
+            this.FilterTextBox = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.Filterbox = new System.Windows.Forms.ComboBox();
+            this.label3 = new System.Windows.Forms.Label();
             modelLabel = new System.Windows.Forms.Label();
             boatTypeLabel = new System.Windows.Forms.Label();
             numberOfRowersLabel = new System.Windows.Forms.Label();
@@ -474,9 +479,9 @@
             // Sortbox
             // 
             this.Sortbox.FormattingEnabled = true;
-            this.Sortbox.Location = new System.Drawing.Point(605, 335);
+            this.Sortbox.Location = new System.Drawing.Point(691, 293);
             this.Sortbox.Name = "Sortbox";
-            this.Sortbox.Size = new System.Drawing.Size(208, 24);
+            this.Sortbox.Size = new System.Drawing.Size(280, 24);
             this.Sortbox.TabIndex = 20;
             // 
             // boatBindingSource1
@@ -486,7 +491,7 @@
             // 
             // SortGo
             // 
-            this.SortGo.Location = new System.Drawing.Point(605, 365);
+            this.SortGo.Location = new System.Drawing.Point(691, 323);
             this.SortGo.Name = "SortGo";
             this.SortGo.Size = new System.Drawing.Size(137, 38);
             this.SortGo.TabIndex = 21;
@@ -496,7 +501,7 @@
             // 
             // SortDescGo
             // 
-            this.SortDescGo.Location = new System.Drawing.Point(748, 365);
+            this.SortDescGo.Location = new System.Drawing.Point(834, 323);
             this.SortDescGo.Name = "SortDescGo";
             this.SortDescGo.Size = new System.Drawing.Size(137, 38);
             this.SortDescGo.TabIndex = 22;
@@ -504,11 +509,59 @@
             this.SortDescGo.UseVisualStyleBackColor = true;
             this.SortDescGo.Click += new System.EventHandler(this.SortDescGo_Click);
             // 
+            // FilterTextBox
+            // 
+            this.FilterTextBox.Location = new System.Drawing.Point(691, 414);
+            this.FilterTextBox.Name = "FilterTextBox";
+            this.FilterTextBox.Size = new System.Drawing.Size(280, 22);
+            this.FilterTextBox.TabIndex = 23;
+            this.FilterTextBox.TextChanged += new System.EventHandler(this.FilterTextBox_TextChanged);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(688, 364);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(91, 17);
+            this.label1.TabIndex = 24;
+            this.label1.Text = "Фильтрация";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(688, 273);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(86, 17);
+            this.label2.TabIndex = 25;
+            this.label2.Text = "Сортировка";
+            // 
+            // Filterbox
+            // 
+            this.Filterbox.FormattingEnabled = true;
+            this.Filterbox.Location = new System.Drawing.Point(820, 386);
+            this.Filterbox.Name = "Filterbox";
+            this.Filterbox.Size = new System.Drawing.Size(151, 24);
+            this.Filterbox.TabIndex = 26;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(772, 389);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(42, 17);
+            this.label3.TabIndex = 27;
+            this.label3.Text = "Поле";
+            // 
             // BoatForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1023, 540);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.Filterbox);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.FilterTextBox);
             this.Controls.Add(this.SortDescGo);
             this.Controls.Add(this.SortGo);
             this.Controls.Add(this.Sortbox);
@@ -586,5 +639,10 @@
         private System.Windows.Forms.BindingSource boatBindingSource1;
         private System.Windows.Forms.Button SortGo;
         private System.Windows.Forms.Button SortDescGo;
+        private System.Windows.Forms.TextBox FilterTextBox;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ComboBox Filterbox;
+        private System.Windows.Forms.Label label3;
     }
 }
