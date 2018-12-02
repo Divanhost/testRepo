@@ -15,15 +15,16 @@ namespace WorldYachts.DAO
         {
             return new SqlConnection(Settings.Default.WorldYachtsConnectionString);
         }
-        public static void StoredProcedureCall(string login, string password)
+        public static void StoredProcedureCall(int value)
         {
             using (var conn = GetConnection())
-            using (var command = new SqlCommand("CheckData", conn)
+            using (var command = new SqlCommand("ChangePrices", conn)
             {
                 CommandType = CommandType.StoredProcedure
             })
             {
                 conn.Open();
+                command.Parameters.Add("@value", value);
                 command.ExecuteNonQuery();
             }
 

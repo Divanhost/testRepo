@@ -37,5 +37,17 @@ namespace WorldYachts.Forms
             BoatForm bf = new BoatForm();
             ShowNextForm(bf, false);
         }
+
+        private void AccessoriesGo_Click(object sender, EventArgs e)
+        {
+            AccessoryForm ac = new AccessoryForm();
+            ShowNextForm(ac, false);
+        }
+
+        private void ContractGo_Click(object sender, EventArgs e)
+        {
+            OrderForm of = new OrderForm();
+            ShowNextForm(of, false);
+        }
     }
 }

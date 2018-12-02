@@ -82,6 +82,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.Filterbox = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.ChooseGo = new System.Windows.Forms.Button();
             modelLabel = new System.Windows.Forms.Label();
             boatTypeLabel = new System.Windows.Forms.Label();
             numberOfRowersLabel = new System.Windows.Forms.Label();
@@ -552,11 +553,23 @@
             this.label3.TabIndex = 27;
             this.label3.Text = "Поле";
             // 
+            // ChooseGo
+            // 
+            this.ChooseGo.Location = new System.Drawing.Point(360, 306);
+            this.ChooseGo.Name = "ChooseGo";
+            this.ChooseGo.Size = new System.Drawing.Size(260, 164);
+            this.ChooseGo.TabIndex = 28;
+            this.ChooseGo.Text = "Хочу выбранную лодку";
+            this.ChooseGo.UseVisualStyleBackColor = true;
+            this.ChooseGo.Visible = false;
+            this.ChooseGo.Click += new System.EventHandler(this.ChooseGo_Click);
+            // 
             // BoatForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1023, 540);
+            this.Controls.Add(this.ChooseGo);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.Filterbox);
             this.Controls.Add(this.label2);
@@ -644,5 +657,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox Filterbox;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button ChooseGo;
     }
 }

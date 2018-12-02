@@ -93,6 +93,7 @@
             this.AccessoriesGo.TabIndex = 1;
             this.AccessoriesGo.Text = "Аксессуары";
             this.AccessoriesGo.UseVisualStyleBackColor = true;
+            this.AccessoriesGo.Click += new System.EventHandler(this.AccessoriesGo_Click);
             // 
             // PartnersGo
             // 
@@ -111,6 +112,7 @@
             this.ContractGo.TabIndex = 3;
             this.ContractGo.Text = "Заказы";
             this.ContractGo.UseVisualStyleBackColor = true;
+            this.ContractGo.Click += new System.EventHandler(this.ContractGo_Click);
             // 
             // InvoiceGo
             // 

@@ -14,6 +14,8 @@ namespace WorldYachts.Forms
 {
     public partial class BoatForm : BaseForm
     {
+        public static int id = -1;
+        public bool visible = false;
         private object query;
         BindingSource bs = new BindingSource();
         public BoatForm()
@@ -36,6 +38,7 @@ namespace WorldYachts.Forms
             {
                 dc.Name = dc.HeaderText;
             }
+           
             
         }
 
@@ -53,7 +56,10 @@ namespace WorldYachts.Forms
         { 
             // TODO: данная строка кода позволяет загрузить данные в таблицу "worldYachtsDataSet.Boat". При необходимости она может быть перемещена или удалена.
             this.boatTableAdapter.Fill(this.worldYachtsDataSet.Boat);
-
+            if (visible)
+            {
+                ChooseGo.Visible = true;
+            }
         }
 
         private void SortGo_Click(object sender, EventArgs e)
@@ -75,6 +81,12 @@ namespace WorldYachts.Forms
         private void FilterTextBox_TextChanged(object sender, EventArgs e)
         {
             boatBindingSource.Filter = string.Format("{0} LIKE '%{1}%'",Filterbox.Text, FilterTextBox.Text);
+        }
+
+        private void ChooseGo_Click(object sender, EventArgs e)
+        {
+             id = Int32.Parse(boatDataGridView.Rows[boatDataGridView.CurrentCell.RowIndex].Cells[0].Value.ToString());
+            this.Close();
         }
     }
 }
