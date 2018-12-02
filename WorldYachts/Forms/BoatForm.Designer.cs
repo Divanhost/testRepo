@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BoatForm));
             System.Windows.Forms.Label modelLabel;
             System.Windows.Forms.Label boatTypeLabel;
             System.Windows.Forms.Label numberOfRowersLabel;
@@ -38,22 +37,23 @@
             System.Windows.Forms.Label woodLabel;
             System.Windows.Forms.Label basePriceLabel;
             System.Windows.Forms.Label vATLabel;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BoatForm));
             this.worldYachtsDataSet = new WorldYachts.WorldYachtsDataSet();
             this.boatBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.boatTableAdapter = new WorldYachts.WorldYachtsDataSetTableAdapters.BoatTableAdapter();
             this.tableAdapterManager = new WorldYachts.WorldYachtsDataSetTableAdapters.TableAdapterManager();
             this.boatBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
+            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
+            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
-            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.boatBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.boatDataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -73,6 +73,10 @@
             this.woodTextBox = new System.Windows.Forms.TextBox();
             this.basePriceTextBox = new System.Windows.Forms.TextBox();
             this.vATTextBox = new System.Windows.Forms.TextBox();
+            this.Sortbox = new System.Windows.Forms.ComboBox();
+            this.boatBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.SortGo = new System.Windows.Forms.Button();
+            this.SortDescGo = new System.Windows.Forms.Button();
             modelLabel = new System.Windows.Forms.Label();
             boatTypeLabel = new System.Windows.Forms.Label();
             numberOfRowersLabel = new System.Windows.Forms.Label();
@@ -86,7 +90,80 @@
             ((System.ComponentModel.ISupportInitialize)(this.boatBindingNavigator)).BeginInit();
             this.boatBindingNavigator.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.boatDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.boatBindingSource1)).BeginInit();
             this.SuspendLayout();
+            // 
+            // modelLabel
+            // 
+            modelLabel.AutoSize = true;
+            modelLabel.Location = new System.Drawing.Point(12, 300);
+            modelLabel.Name = "modelLabel";
+            modelLabel.Size = new System.Drawing.Size(50, 17);
+            modelLabel.TabIndex = 4;
+            modelLabel.Text = "Model:";
+            // 
+            // boatTypeLabel
+            // 
+            boatTypeLabel.AutoSize = true;
+            boatTypeLabel.Location = new System.Drawing.Point(12, 328);
+            boatTypeLabel.Name = "boatTypeLabel";
+            boatTypeLabel.Size = new System.Drawing.Size(77, 17);
+            boatTypeLabel.TabIndex = 6;
+            boatTypeLabel.Text = "Boat Type:";
+            // 
+            // numberOfRowersLabel
+            // 
+            numberOfRowersLabel.AutoSize = true;
+            numberOfRowersLabel.Location = new System.Drawing.Point(12, 356);
+            numberOfRowersLabel.Name = "numberOfRowersLabel";
+            numberOfRowersLabel.Size = new System.Drawing.Size(132, 17);
+            numberOfRowersLabel.TabIndex = 8;
+            numberOfRowersLabel.Text = "Number Of Rowers:";
+            // 
+            // mastLabel
+            // 
+            mastLabel.AutoSize = true;
+            mastLabel.Location = new System.Drawing.Point(12, 386);
+            mastLabel.Name = "mastLabel";
+            mastLabel.Size = new System.Drawing.Size(42, 17);
+            mastLabel.TabIndex = 10;
+            mastLabel.Text = "Mast:";
+            // 
+            // colourLabel
+            // 
+            colourLabel.AutoSize = true;
+            colourLabel.Location = new System.Drawing.Point(12, 414);
+            colourLabel.Name = "colourLabel";
+            colourLabel.Size = new System.Drawing.Size(53, 17);
+            colourLabel.TabIndex = 12;
+            colourLabel.Text = "Colour:";
+            // 
+            // woodLabel
+            // 
+            woodLabel.AutoSize = true;
+            woodLabel.Location = new System.Drawing.Point(12, 442);
+            woodLabel.Name = "woodLabel";
+            woodLabel.Size = new System.Drawing.Size(49, 17);
+            woodLabel.TabIndex = 14;
+            woodLabel.Text = "Wood:";
+            // 
+            // basePriceLabel
+            // 
+            basePriceLabel.AutoSize = true;
+            basePriceLabel.Location = new System.Drawing.Point(12, 470);
+            basePriceLabel.Name = "basePriceLabel";
+            basePriceLabel.Size = new System.Drawing.Size(80, 17);
+            basePriceLabel.TabIndex = 16;
+            basePriceLabel.Text = "Base Price:";
+            // 
+            // vATLabel
+            // 
+            vATLabel.AutoSize = true;
+            vATLabel.Location = new System.Drawing.Point(12, 498);
+            vATLabel.Name = "vATLabel";
+            vATLabel.Size = new System.Drawing.Size(39, 17);
+            vATLabel.TabIndex = 18;
+            vATLabel.Text = "VAT:";
             // 
             // worldYachtsDataSet
             // 
@@ -149,13 +226,38 @@
             this.boatBindingNavigator.TabIndex = 0;
             this.boatBindingNavigator.Text = "bindingNavigator1";
             // 
+            // bindingNavigatorAddNewItem
+            // 
+            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
+            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
+            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(24, 24);
+            this.bindingNavigatorAddNewItem.Text = "Добавить";
+            // 
+            // bindingNavigatorCountItem
+            // 
+            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(55, 24);
+            this.bindingNavigatorCountItem.Text = "для {0}";
+            this.bindingNavigatorCountItem.ToolTipText = "Общее число элементов";
+            // 
+            // bindingNavigatorDeleteItem
+            // 
+            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
+            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
+            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(24, 24);
+            this.bindingNavigatorDeleteItem.Text = "Удалить";
+            // 
             // bindingNavigatorMoveFirstItem
             // 
             this.bindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.bindingNavigatorMoveFirstItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem.Image")));
             this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
             this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(24, 22);
+            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(24, 24);
             this.bindingNavigatorMoveFirstItem.Text = "Переместить в начало";
             // 
             // bindingNavigatorMovePreviousItem
@@ -164,13 +266,13 @@
             this.bindingNavigatorMovePreviousItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem.Image")));
             this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
             this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(24, 22);
+            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(24, 24);
             this.bindingNavigatorMovePreviousItem.Text = "Переместить назад";
             // 
             // bindingNavigatorSeparator
             // 
             this.bindingNavigatorSeparator.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 25);
+            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 27);
             // 
             // bindingNavigatorPositionItem
             // 
@@ -181,17 +283,10 @@
             this.bindingNavigatorPositionItem.Text = "0";
             this.bindingNavigatorPositionItem.ToolTipText = "Текущее положение";
             // 
-            // bindingNavigatorCountItem
-            // 
-            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(55, 20);
-            this.bindingNavigatorCountItem.Text = "для {0}";
-            this.bindingNavigatorCountItem.ToolTipText = "Общее число элементов";
-            // 
             // bindingNavigatorSeparator1
             // 
-            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 6);
+            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
+            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 27);
             // 
             // bindingNavigatorMoveNextItem
             // 
@@ -213,33 +308,15 @@
             // 
             // bindingNavigatorSeparator2
             // 
-            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 6);
-            // 
-            // bindingNavigatorAddNewItem
-            // 
-            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
-            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
-            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(24, 24);
-            this.bindingNavigatorAddNewItem.Text = "Добавить";
-            // 
-            // bindingNavigatorDeleteItem
-            // 
-            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
-            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
-            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(24, 24);
-            this.bindingNavigatorDeleteItem.Text = "Удалить";
+            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
+            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 27);
             // 
             // boatBindingNavigatorSaveItem
             // 
             this.boatBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.boatBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("boatBindingNavigatorSaveItem.Image")));
             this.boatBindingNavigatorSaveItem.Name = "boatBindingNavigatorSaveItem";
-            this.boatBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 23);
+            this.boatBindingNavigatorSaveItem.Size = new System.Drawing.Size(24, 24);
             this.boatBindingNavigatorSaveItem.Text = "Сохранить данные";
             this.boatBindingNavigatorSaveItem.Click += new System.EventHandler(this.boatBindingNavigatorSaveItem_Click);
             // 
@@ -262,7 +339,7 @@
             this.boatDataGridView.Name = "boatDataGridView";
             this.boatDataGridView.ReadOnly = true;
             this.boatDataGridView.RowTemplate.Height = 24;
-            this.boatDataGridView.Size = new System.Drawing.Size(936, 228);
+            this.boatDataGridView.Size = new System.Drawing.Size(959, 228);
             this.boatDataGridView.TabIndex = 1;
             // 
             // dataGridViewTextBoxColumn1
@@ -277,57 +354,56 @@
             this.dataGridViewTextBoxColumn2.DataPropertyName = "Model";
             this.dataGridViewTextBoxColumn2.HeaderText = "Model";
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn3
             // 
             this.dataGridViewTextBoxColumn3.DataPropertyName = "BoatType";
             this.dataGridViewTextBoxColumn3.HeaderText = "BoatType";
             this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn4
             // 
             this.dataGridViewTextBoxColumn4.DataPropertyName = "NumberOfRowers";
             this.dataGridViewTextBoxColumn4.HeaderText = "NumberOfRowers";
             this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
             // 
             // dataGridViewCheckBoxColumn1
             // 
             this.dataGridViewCheckBoxColumn1.DataPropertyName = "Mast";
             this.dataGridViewCheckBoxColumn1.HeaderText = "Mast";
             this.dataGridViewCheckBoxColumn1.Name = "dataGridViewCheckBoxColumn1";
+            this.dataGridViewCheckBoxColumn1.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn5
             // 
             this.dataGridViewTextBoxColumn5.DataPropertyName = "Colour";
             this.dataGridViewTextBoxColumn5.HeaderText = "Colour";
             this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn6
             // 
             this.dataGridViewTextBoxColumn6.DataPropertyName = "Wood";
             this.dataGridViewTextBoxColumn6.HeaderText = "Wood";
             this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            this.dataGridViewTextBoxColumn6.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn7
             // 
             this.dataGridViewTextBoxColumn7.DataPropertyName = "BasePrice";
             this.dataGridViewTextBoxColumn7.HeaderText = "BasePrice";
             this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            this.dataGridViewTextBoxColumn7.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn8
             // 
             this.dataGridViewTextBoxColumn8.DataPropertyName = "VAT";
             this.dataGridViewTextBoxColumn8.HeaderText = "VAT";
             this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
-            // 
-            // modelLabel
-            // 
-            modelLabel.AutoSize = true;
-            modelLabel.Location = new System.Drawing.Point(12, 300);
-            modelLabel.Name = "modelLabel";
-            modelLabel.Size = new System.Drawing.Size(50, 17);
-            modelLabel.TabIndex = 4;
-            modelLabel.Text = "Model:";
+            this.dataGridViewTextBoxColumn8.ReadOnly = true;
             // 
             // modelTextBox
             // 
@@ -337,15 +413,6 @@
             this.modelTextBox.Size = new System.Drawing.Size(104, 22);
             this.modelTextBox.TabIndex = 5;
             // 
-            // boatTypeLabel
-            // 
-            boatTypeLabel.AutoSize = true;
-            boatTypeLabel.Location = new System.Drawing.Point(12, 328);
-            boatTypeLabel.Name = "boatTypeLabel";
-            boatTypeLabel.Size = new System.Drawing.Size(77, 17);
-            boatTypeLabel.TabIndex = 6;
-            boatTypeLabel.Text = "Boat Type:";
-            // 
             // boatTypeTextBox
             // 
             this.boatTypeTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.boatBindingSource, "BoatType", true));
@@ -354,15 +421,6 @@
             this.boatTypeTextBox.Size = new System.Drawing.Size(104, 22);
             this.boatTypeTextBox.TabIndex = 7;
             // 
-            // numberOfRowersLabel
-            // 
-            numberOfRowersLabel.AutoSize = true;
-            numberOfRowersLabel.Location = new System.Drawing.Point(12, 356);
-            numberOfRowersLabel.Name = "numberOfRowersLabel";
-            numberOfRowersLabel.Size = new System.Drawing.Size(132, 17);
-            numberOfRowersLabel.TabIndex = 8;
-            numberOfRowersLabel.Text = "Number Of Rowers:";
-            // 
             // numberOfRowersTextBox
             // 
             this.numberOfRowersTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.boatBindingSource, "NumberOfRowers", true));
@@ -370,15 +428,6 @@
             this.numberOfRowersTextBox.Name = "numberOfRowersTextBox";
             this.numberOfRowersTextBox.Size = new System.Drawing.Size(104, 22);
             this.numberOfRowersTextBox.TabIndex = 9;
-            // 
-            // mastLabel
-            // 
-            mastLabel.AutoSize = true;
-            mastLabel.Location = new System.Drawing.Point(12, 386);
-            mastLabel.Name = "mastLabel";
-            mastLabel.Size = new System.Drawing.Size(42, 17);
-            mastLabel.TabIndex = 10;
-            mastLabel.Text = "Mast:";
             // 
             // mastCheckBox
             // 
@@ -390,15 +439,6 @@
             this.mastCheckBox.Text = "Мачта";
             this.mastCheckBox.UseVisualStyleBackColor = true;
             // 
-            // colourLabel
-            // 
-            colourLabel.AutoSize = true;
-            colourLabel.Location = new System.Drawing.Point(12, 414);
-            colourLabel.Name = "colourLabel";
-            colourLabel.Size = new System.Drawing.Size(53, 17);
-            colourLabel.TabIndex = 12;
-            colourLabel.Text = "Colour:";
-            // 
             // colourTextBox
             // 
             this.colourTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.boatBindingSource, "Colour", true));
@@ -406,15 +446,6 @@
             this.colourTextBox.Name = "colourTextBox";
             this.colourTextBox.Size = new System.Drawing.Size(104, 22);
             this.colourTextBox.TabIndex = 13;
-            // 
-            // woodLabel
-            // 
-            woodLabel.AutoSize = true;
-            woodLabel.Location = new System.Drawing.Point(12, 442);
-            woodLabel.Name = "woodLabel";
-            woodLabel.Size = new System.Drawing.Size(49, 17);
-            woodLabel.TabIndex = 14;
-            woodLabel.Text = "Wood:";
             // 
             // woodTextBox
             // 
@@ -424,15 +455,6 @@
             this.woodTextBox.Size = new System.Drawing.Size(104, 22);
             this.woodTextBox.TabIndex = 15;
             // 
-            // basePriceLabel
-            // 
-            basePriceLabel.AutoSize = true;
-            basePriceLabel.Location = new System.Drawing.Point(12, 470);
-            basePriceLabel.Name = "basePriceLabel";
-            basePriceLabel.Size = new System.Drawing.Size(80, 17);
-            basePriceLabel.TabIndex = 16;
-            basePriceLabel.Text = "Base Price:";
-            // 
             // basePriceTextBox
             // 
             this.basePriceTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.boatBindingSource, "BasePrice", true));
@@ -440,15 +462,6 @@
             this.basePriceTextBox.Name = "basePriceTextBox";
             this.basePriceTextBox.Size = new System.Drawing.Size(104, 22);
             this.basePriceTextBox.TabIndex = 17;
-            // 
-            // vATLabel
-            // 
-            vATLabel.AutoSize = true;
-            vATLabel.Location = new System.Drawing.Point(12, 498);
-            vATLabel.Name = "vATLabel";
-            vATLabel.Size = new System.Drawing.Size(39, 17);
-            vATLabel.TabIndex = 18;
-            vATLabel.Text = "VAT:";
             // 
             // vATTextBox
             // 
@@ -458,11 +471,47 @@
             this.vATTextBox.Size = new System.Drawing.Size(104, 22);
             this.vATTextBox.TabIndex = 19;
             // 
+            // Sortbox
+            // 
+            this.Sortbox.FormattingEnabled = true;
+            this.Sortbox.Location = new System.Drawing.Point(605, 335);
+            this.Sortbox.Name = "Sortbox";
+            this.Sortbox.Size = new System.Drawing.Size(208, 24);
+            this.Sortbox.TabIndex = 20;
+            // 
+            // boatBindingSource1
+            // 
+            this.boatBindingSource1.DataMember = "Boat";
+            this.boatBindingSource1.DataSource = this.worldYachtsDataSet;
+            // 
+            // SortGo
+            // 
+            this.SortGo.Location = new System.Drawing.Point(605, 365);
+            this.SortGo.Name = "SortGo";
+            this.SortGo.Size = new System.Drawing.Size(137, 38);
+            this.SortGo.TabIndex = 21;
+            this.SortGo.Text = "По возрастанию";
+            this.SortGo.UseVisualStyleBackColor = true;
+            this.SortGo.Click += new System.EventHandler(this.SortGo_Click);
+            // 
+            // SortDescGo
+            // 
+            this.SortDescGo.Location = new System.Drawing.Point(748, 365);
+            this.SortDescGo.Name = "SortDescGo";
+            this.SortDescGo.Size = new System.Drawing.Size(137, 38);
+            this.SortDescGo.TabIndex = 22;
+            this.SortDescGo.Text = "По убыванию";
+            this.SortDescGo.UseVisualStyleBackColor = true;
+            this.SortDescGo.Click += new System.EventHandler(this.SortDescGo_Click);
+            // 
             // BoatForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1023, 540);
+            this.Controls.Add(this.SortDescGo);
+            this.Controls.Add(this.SortGo);
+            this.Controls.Add(this.Sortbox);
             this.Controls.Add(modelLabel);
             this.Controls.Add(this.modelTextBox);
             this.Controls.Add(boatTypeLabel);
@@ -490,6 +539,7 @@
             this.boatBindingNavigator.ResumeLayout(false);
             this.boatBindingNavigator.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.boatDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.boatBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -532,5 +582,9 @@
         private System.Windows.Forms.TextBox woodTextBox;
         private System.Windows.Forms.TextBox basePriceTextBox;
         private System.Windows.Forms.TextBox vATTextBox;
+        private System.Windows.Forms.ComboBox Sortbox;
+        private System.Windows.Forms.BindingSource boatBindingSource1;
+        private System.Windows.Forms.Button SortGo;
+        private System.Windows.Forms.Button SortDescGo;
     }
 }
