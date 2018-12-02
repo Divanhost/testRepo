@@ -54,17 +54,47 @@
     <Compile Include="Forms\BaseForm.Designer.cs">
       <DependentUpon>BaseForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\BoatForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\BoatForm.Designer.cs">
+      <DependentUpon>BoatForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CustomerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CustomerForm.Designer.cs">
+      <DependentUpon>CustomerForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\IDForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\IDForm.Designer.cs">
       <DependentUpon>IDForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Menu.cs">
+    <Compile Include="Forms\InvoiceForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Menu.Designer.cs">
-      <DependentUpon>Menu.cs</DependentUpon>
+    <Compile Include="Forms\InvoiceForm.Designer.cs">
+      <DependentUpon>InvoiceForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MenuForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MenuForm.Designer.cs">
+      <DependentUpon>MenuForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\OrderForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\OrderForm.Designer.cs">
+      <DependentUpon>OrderForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SalesPersonForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SalesPersonForm.Designer.cs">
+      <DependentUpon>SalesPersonForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -74,11 +104,14 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>WorldYachtsDataSet.xsd</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Forms\BoatForm.resx">
+      <DependentUpon>BoatForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\IDForm.resx">
       <DependentUpon>IDForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Menu.resx">
-      <DependentUpon>Menu.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\MenuForm.resx">
+      <DependentUpon>MenuForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

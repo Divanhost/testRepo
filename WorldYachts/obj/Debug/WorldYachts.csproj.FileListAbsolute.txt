@@ -8,4 +8,5 @@ D:\Projects\C#\WorldYachts\WorldYachts\obj\Debug\WorldYachts.csproj.CoreCompileI
 D:\Projects\C#\WorldYachts\WorldYachts\obj\Debug\WorldYachts.exe
 D:\Projects\C#\WorldYachts\WorldYachts\obj\Debug\WorldYachts.pdb
 D:\Projects\C#\WorldYachts\WorldYachts\obj\Debug\WorldYachts.IDForm.resources
-D:\Projects\C#\WorldYachts\WorldYachts\obj\Debug\WorldYachts.Forms.Menu.resources
+D:\Projects\C#\WorldYachts\WorldYachts\obj\Debug\WorldYachts.Forms.MenuForm.resources
+D:\Projects\C#\WorldYachts\WorldYachts\obj\Debug\WorldYachts.Forms.BoatForm.resources

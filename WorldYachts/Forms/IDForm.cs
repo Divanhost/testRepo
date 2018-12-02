@@ -27,17 +27,11 @@ namespace WorldYachts
             if (BaseDAO.FunctionCall(l, p))
             {
                 MessageBox.Show("Hello");
-            }
-            /*if (user != null)
-            {
-                DataBus.GetInstance().currentUser = user;
-                MainMenuForm form = new MainMenuForm();
+                MenuForm form = new MenuForm();
                 ShowNextForm(form);
             }
-            else
-            {
-                labelMessage.Text = "Access Denied";
-            }*/
+
         }
     }
 }
+

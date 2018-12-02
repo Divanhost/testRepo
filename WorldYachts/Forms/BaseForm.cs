@@ -17,7 +17,7 @@ namespace WorldYachts.Forms
             InitializeComponent();
         }
 
-        protected void showNextForm(BaseForm nextForm, bool isClose = true)
+        protected void ShowNextForm(BaseForm nextForm, bool isClose = true)
         {
 
             this.Hide();
