@@ -54,6 +54,12 @@
     <Compile Include="Forms\AccessoryForm.Designer.cs">
       <DependentUpon>AccessoryForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\applianceForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\applianceForm.Designer.cs">
+      <DependentUpon>applianceForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\BaseForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -65,6 +71,12 @@
     </Compile>
     <Compile Include="Forms\BoatForm.Designer.cs">
       <DependentUpon>BoatForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ContractForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ContractForm.Designer.cs">
+      <DependentUpon>ContractForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\CustomerForm.cs">
       <SubType>Form</SubType>
@@ -114,11 +126,20 @@
     <EmbeddedResource Include="Forms\AccessoryForm.resx">
       <DependentUpon>AccessoryForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\applianceForm.resx">
+      <DependentUpon>applianceForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\BoatForm.resx">
       <DependentUpon>BoatForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ContractForm.resx">
+      <DependentUpon>ContractForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\IDForm.resx">
       <DependentUpon>IDForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\InvoiceForm.resx">
+      <DependentUpon>InvoiceForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\MenuForm.resx">
       <DependentUpon>MenuForm.cs</DependentUpon>

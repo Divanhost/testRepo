@@ -10,6 +10,9 @@
 
 #pragma warning disable 1591
 
+using System;
+using System.Data.SqlClient;
+
 namespace WorldYachts {
     
     
@@ -6565,6 +6568,8 @@ SELECT AccessoryID, AccName, DescriptionOfAccessory, Price, VAT, Inventory, Orde
                     int Original_PartnerID) {
             return this.Update(AccName, DescriptionOfAccessory, Price, VAT, Inventory, OrderLevel, OrderBatch, PartnerID, Original_AccessoryID, Original_AccName, Original_DescriptionOfAccessory, Original_Price, Original_VAT, Original_Inventory, Original_OrderLevel, Original_OrderBatch, Original_PartnerID, Original_AccessoryID);
         }
+
+       
     }
     
     /// <summary>

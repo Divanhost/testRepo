@@ -12,3 +12,6 @@ D:\Projects\C#\WorldYachts\WorldYachts\obj\Debug\WorldYachts.Forms.MenuForm.reso
 D:\Projects\C#\WorldYachts\WorldYachts\obj\Debug\WorldYachts.Forms.BoatForm.resources
 D:\Projects\C#\WorldYachts\WorldYachts\obj\Debug\WorldYachts.Forms.AccessoryForm.resources
 D:\Projects\C#\WorldYachts\WorldYachts\obj\Debug\WorldYachts.Forms.OrderForm.resources
+D:\Projects\C#\WorldYachts\WorldYachts\obj\Debug\WorldYachts.Forms.applianceForm.resources
+D:\Projects\C#\WorldYachts\WorldYachts\obj\Debug\WorldYachts.Forms.ContractForm.resources
+D:\Projects\C#\WorldYachts\WorldYachts\obj\Debug\WorldYachts.Forms.InvoiceForm.resources

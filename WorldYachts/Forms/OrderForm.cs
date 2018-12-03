@@ -74,6 +74,12 @@ namespace WorldYachts.Forms
 
             }
             this.orderTableAdapter.Fill(this.worldYachtsDataSet.Order);
+            int ord = Int32.Parse(orderDataGridView.Rows[orderDataGridView.Rows.Count-2].Cells[0].Value.ToString());
+            AccessoryForm af = new AccessoryForm();
+            af.orderDirection = true;
+            af.boatID = Int32.Parse(BoatIDTextBox.Text);
+            af.orderID = ord;
+            ShowNextForm(af, false);
         }
     }
 }

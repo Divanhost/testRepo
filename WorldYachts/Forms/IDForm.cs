@@ -14,6 +14,7 @@ namespace WorldYachts
 {
     public partial class IDForm : BaseForm
     {
+        public int count = 3;
         public IDForm()
         {
             InitializeComponent();
@@ -29,6 +30,17 @@ namespace WorldYachts
                 MessageBox.Show("Hello");
                 MenuForm form = new MenuForm();
                 ShowNextForm(form);
+            }
+            else
+            {
+                if(count <= 0)
+                {
+                    System.Threading.Thread.Sleep(1500);
+                }
+                string message= @"Heверно введен логин или пароль, попробуйте еще раз 
+                                Осталось попыток - "+this.count--;
+                MessageBox.Show(message);
+                
             }
 
         }

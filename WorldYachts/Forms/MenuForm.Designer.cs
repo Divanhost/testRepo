@@ -122,6 +122,7 @@
             this.InvoiceGo.TabIndex = 4;
             this.InvoiceGo.Text = "Счета";
             this.InvoiceGo.UseVisualStyleBackColor = true;
+            this.InvoiceGo.Click += new System.EventHandler(this.InvoiceGo_Click);
             // 
             // CustomerGo
             // 

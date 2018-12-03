@@ -49,5 +49,11 @@ namespace WorldYachts.Forms
             OrderForm of = new OrderForm();
             ShowNextForm(of, false);
         }
+
+        private void InvoiceGo_Click(object sender, EventArgs e)
+        {
+            ContractForm cf = new ContractForm();
+            ShowNextForm(cf);
+        }
     }
 }
